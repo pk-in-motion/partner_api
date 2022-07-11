@@ -74,7 +74,8 @@ def publish_uploaded_video(uploaded_url, channel_id ):
     if response.status_code != 200 or not 'id' in response.json():
         raise Exception('Invalid publish video response')
 
-    return response.json()
+    #return response.json()
+    print(response.json())
 
 
 

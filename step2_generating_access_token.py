@@ -24,7 +24,8 @@ def get_access_token(client_id, client_secret):
     if response.status_code != 200 or not 'access_token' in response.json():
         raise Exception('Invalid authentication response')
 
-    return response.json()['access_token']
+    #return response.json()['access_token']
+    print(response.json()['access_token'])
 
 
 #Fill the client_id and client_secret generated in the step 1 and accessible directly from your Partner HQ.
