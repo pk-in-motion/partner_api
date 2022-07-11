@@ -81,10 +81,10 @@ def publish_uploaded_video(uploaded_url, channel_id ):
 #Executing the functions:
 
 #Calling the get_upload_url function to retrieve the file upload url
-upload_url = get_upload_url( authorization_header )
+upload_url = get_upload_url()
 
 #Calling the upload_video_file function to upload the video file
-uploaded_url = upload_video_file(upload_url,  authorization_header )
+uploaded_url = upload_video_file(upload_url)
 
 #Calling the publish_uploaded_video function to set up the video mandatory fields and publish it into your channel
 published_video = publish_uploaded_video(uploaded_url, <your-channel-xid>)
