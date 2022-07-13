@@ -57,10 +57,14 @@ def delete_video(video_id):
 
     response = requests.delete( deleting_video_url,
                                 headers= authorization_header )
-    if response.status_code != 200 or not 'id' in response.json():
-        raise Exception('Invalid publish video response')
+    #if response.status_code != 200 or not 'id' in response.json():
+    #    raise Exception('Invalid publish video response')
 
-    return response.json()
+    #return response.json()
+    print(response.status_code)
+    print('-------------')
+    print(response)
 
 #Calling the edit_video_title to modify the title of one of my existing videos
-edit_video_title(<your-video-xid>, <your-new-title>)
+# edit_video_title(<your-video-xid>, <your-new-title>)
+delete_video(<your-video-xid>)

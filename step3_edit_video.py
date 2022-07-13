@@ -59,7 +59,8 @@ def edit_video_title(video_id, title):
     if response.status_code != 200 or not 'id' in response.json():
         raise Exception('Invalid publish video response')
 
-    return response.json()
+    #return response.json()
+    print(response.json())
 
 
 #Calling the edit_video_title to modify the title of one of my existing videos
